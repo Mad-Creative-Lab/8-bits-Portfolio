@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Mad | Cre@tive Lab</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+
+     <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon-180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./img/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="./img/favicon-512.png">
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind.config.js"></script>
+    <script src="./script.js" defer></script>
+</head>
+<body class="pixel-grid">
+    <!-- Superposition de lignes de balayage (position fixe) -->
+    <div class="scanlines"></div>
+    
+    <!-- Basculer le thème
+    <div class="fixed top-4 right-4 z-50">
+        <button id="theme-toggle" class="p-2 bg-pixel-gray hover:bg-neon-purple transition-all duration-300">
+            <i class="fas fa-moon text-neon-blue"></i>
+        </button>
+    </div> -->
+    
+    <!-- Main content (scrollable) -->
+    <div class="content container mx-auto px-4 py-12 max-w-6xl">
+        <!-- Header -->
+        <header class="flex flex-col md:flex-row items-center justify-between mb-16">
+            <div class="flex items-center mb-8 md:mb-0">
+                <div class="character mr-6 animate-float"></div>
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-press-start text-neon-pink mb-2">MAD</h1>
+                    <div class="overflow-hidden whitespace-nowrap border-r-4 border-neon-blue">
+                        <p class="text-2xl font-vt323 text-neon-blue typing">Creative Technologist</p>
+                    </div>
+                </div>
+            </div>
+            
+            <nav class="flex space-x-4 md:space-x-6">
+                <a href="#about" class="text-xl font-vt323 text-neon-green hover:text-neon-yellow transition-colors">À propos</a>
+                <a href="#skills" class="text-xl font-vt323 text-neon-green hover:text-neon-yellow transition-colors">Compétences</a>
+                <a href="#work" class="text-xl font-vt323 text-neon-green hover:text-neon-yellow transition-colors">Projets</a>
+                <a href="#contact" class="text-xl font-vt323 text-neon-green hover:text-neon-yellow transition-colors">Contact</a>
+            </nav>
+        </header>
+        
+        <!-- Hero section -->
+        <section class="pixel-border p-8 mb-16 bg-pixel-gray bg-opacity-80 backdrop-blur-sm">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h2 class="text-3xl font-press-start text-neon-blue mb-4">// HELLO WORLD</h2>
+                    <p class="text-xl mb-6 leading-relaxed">
+                        Je suis Mad — un créatif multidisciplinaire spécialisé en développement web, ingénierie sonore et narration visuelle.
+                        Je crée des passerelles entre la technologie et l’art pour concevoir des expériences numériques immersives.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="px-6 py-2 bg-neon-pink text-pixel-dark font-press-start hover:bg-neon-purple transition-colors">
+                            ME CONTACTER
+                        </a>
+                        <a href="#work" class="px-6 py-2 border-2 border-neon-blue text-neon-blue font-press-start hover:bg-neon-blue hover:text-pixel-dark transition-colors">
+                            MES PROJETS
+                        </a>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <div class="relative bg-pixel-dark p-6 rounded-lg border-2 border-neon-blue">
+                            <div class="flex justify-between items-center mb-4">
+                                <div class="flex space-x-2">
+                                    <div class="w-3 h-3 rounded-full bg-neon-pink"></div>
+                                    <div class="w-3 h-3 rounded-full bg-neon-yellow"></div>
+                                    <div class="w-3 h-3 rounded-full bg-neon-green"></div>
+                                </div>
+                                <div class="text-neon-blue font-vt323">terminal.js</div>
+                            </div>
+                            <div class="font-vt323 text-neon-green">
+                                <p class="mb-2">> mad.init()</p>
+                                <p class="mb-2">> Loading creative modules...</p>
+                                <p class="mb-2">> WebDev: 100%</p>
+                                <p class="mb-2">> SoundDesign: 100%</p>
+                                <p class="mb-2">> Visuals: 100%</p>
+                                <p class="text-neon-blue">> System ready!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About section -->
+        <section id="about" class="mb-16">
+            <h2 class="text-3xl font-press-start text-neon-yellow mb-8">// À PROPOS</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="pixel-border p-6 bg-pixel-gray bg-opacity-80">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-code text-2xl text-neon-blue mr-3"></i>
+                        <h3 class="text-xl font-press-start text-neon-pink">Développement Web</h3>
+                    </div>
+                    <p class="text-lg">
+                        Développeur full-stack spécialisé dans les technologies web modernes.
+                        Je conçois des applications web rapides, responsives et accessibles, avec un code propre et un design au pixel près.
+                    </p>
+                </div>
+                <div class="pixel-border p-6 bg-pixel-gray bg-opacity-80">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-headphones text-2xl text-neon-purple mr-3"></i>
+                        <h3 class="text-xl font-press-start text-neon-pink">Sound Design</h3>
+                    </div>
+                    <p class="text-lg">
+                        Ingénieur du son et sound designer professionnel, avec une expérience en production musicale, son pour le cinéma/jeux vidéo et événements live.
+                        Je crée des expériences sonores immersives.
+                </div>
+                <div class="pixel-border p-6 bg-pixel-gray bg-opacity-80">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-film text-2xl text-neon-green mr-3"></i>
+                        <h3 class="text-xl font-press-start text-neon-pink">Visual Storytelling</h3>
+                    </div>
+                    <p class="text-lg">
+                        Je combine compétences techniques et vision artistique pour créer des narrations visuelles percutantes.
+                        De la conception à la livraison finale, je donne vie aux idées à travers la vidéo et le motion design.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Skills section -->
+        <section id="skills" class="mb-16">
+            <h2 class="text-3xl font-press-start text-neon-yellow mb-8">// MES COMPÉTENCES</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Development skills -->
+                <div class="pixel-border p-6 bg-pixel-gray bg-opacity-80">
+                    <h3 class="text-xl font-press-start text-neon-blue mb-4">Développement Web</h3>
+                    
+                    <div class="mb-4">
+                        <div class="flex justify-between mb-1">
+                            <span class="font-vt323">JavaScript</span>
+                            <span class="font-vt323">95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <div class="flex justify-between mb-1">
+                            <span class="font-vt323">React.js</span>
+                            <span class="font-vt323">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <div class="flex justify-between mb-1">
+                            <span class="font-vt323">HTML/CSS</span>
+                            <span class="font-vt323">98%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 98%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <div class="flex justify-between mb-1">
+                            <span class="font-vt323">PHP</span>
+                            <span class="font-vt323">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <div class="flex justify-between mb-1">
+                            <span class="font-vt323">SQL</span>
+                            <span class="font-vt323">88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 88%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Audio skills -->
+                <div class="pixel-border p-6 bg-pixel-gray bg-opacity-80">
+                    <h3 class="text-xl font-press-start text-neon-blue mb-4">Audio Production</h3>
+                    
+                    <div class="mb-4">
+                        <div class="flex justify-between mb-1">
+                            <span class="font-vt323">Cubase</span>
+                            <span class="font-vt323">95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <div class="flex justify-between mb-1">
+                            <span class="font-vt323">Ableton Live</span>
+                            <span class="font-vt323">92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 92%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <div class="flex justify-between mb-1">
+                            <span class="font-vt323">Waves Plugins</span>
+                            <span class="font-vt323">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <div class="flex justify-between mb-1">
+                            <span class="font-vt323">Native Instruments</span>
+                            <span class="font-vt323">88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 88%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <div class="flex justify-between mb-1">
+                            <span class="font-vt323">DJ Equipment</span>
+                            <span class="font-vt323">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tools section -->
+            <div class="mt-8 pixel-border p-6 bg-pixel-gray bg-opacity-80">
+                <h3 class="text-xl font-press-start text-neon-blue mb-4">Outils et Technologies</h3>
+                
+                <div class="flex flex-wrap gap-4">
+                    <div class="tooltip">
+                        <div class="px-4 py-2 bg-pixel-dark border-2 border-neon-pink text-neon-pink font-vt323">
+                            <i class="fab fa-js mr-2"></i> JavaScript
+                        </div>
+                        <span class="tooltip-text">ES6+, Node.js, Express</span>
+                    </div>
+                    
+                    <div class="tooltip">
+                        <div class="px-4 py-2 bg-pixel-dark border-2 border-neon-blue text-neon-blue font-vt323">
+                            <i class="fab fa-react mr-2"></i> React
+                        </div>
+                        <span class="tooltip-text">React Hooks, Context API</span>
+                    </div>
+                    
+                    <div class="tooltip">
+                        <div class="px-4 py-2 bg-pixel-dark border-2 border-neon-green text-neon-green font-vt323">
+                            <i class="fas fa-database mr-2"></i> SQL
+                        </div>
+                        <span class="tooltip-text">MySQL, PostgreSQL</span>
+                    </div>
+                    
+                    <div class="tooltip">
+                        <div class="px-4 py-2 bg-pixel-dark border-2 border-neon-purple text-neon-purple font-vt323">
+                            <i class="fas fa-music mr-2"></i> Cubase
+                        </div>
+                        <span class="tooltip-text">Music production, mixing</span>
+                    </div>
+                    
+                    <div class="tooltip">
+                        <div class="px-4 py-2 bg-pixel-dark border-2 border-neon-yellow text-neon-yellow font-vt323">
+                            <i class="fas fa-sliders-h mr-2"></i> Ableton
+                        </div>
+                        <span class="tooltip-text">Live performance, sound design</span>
+                    </div>
+                    
+                    <div class="tooltip">
+                        <div class="px-4 py-2 bg-pixel-dark border-2 border-neon-pink text-neon-pink font-vt323">
+                            <i class="fas fa-wave-square mr-2"></i> Waves
+                        </div>
+                        <span class="tooltip-text">Audio processing plugins</span>
+                    </div>
+                    
+                    <div class="tooltip">
+                        <div class="px-4 py-2 bg-pixel-dark border-2 border-neon-blue text-neon-blue font-vt323">
+                            <i class="fas fa-compact-disc mr-2"></i> NI Komplete
+                        </div>
+                        <span class="tooltip-text">Synthesizers, effects</span>
+                    </div>
+                    
+                    <div class="tooltip">
+                        <div class="px-4 py-2 bg-pixel-dark border-2 border-neon-green text-neon-green font-vt323">
+                            <i class="fas fa-turntable mr-2"></i> Pioneer
+                        </div>
+                        <span class="tooltip-text">DJ equipment, mixers</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section Mon Travail -->
+        <section id="work" class="mb-16">
+            <h2 class="text-3xl font-press-start text-neon-yellow mb-8">// MON TRAVAIL</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project 1 -->
+                <div class="pixel-border p-4 bg-pixel-gray bg-opacity-80 hover:bg-neon-purple hover:bg-opacity-20 transition-all duration-300 group">
+                    <div class="mb-4 h-40 bg-pixel-dark flex items-center justify-center">
+                        <i class="fas fa-laptop-code text-6xl text-neon-blue group-hover:text-neon-pink transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-press-start text-neon-blue mb-2">Synapsophonie</h3>
+                    <p class="mb-4">SynapsoPhonie est un blog créatif où se rencontrent technologie, art, musique et philosophie.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-pixel-dark text-neon-green text-xs font-vt323">Symfony</span>
+                        <span class="px-2 py-1 bg-pixel-dark text-neon-green text-xs font-vt323">MySQL</span>
+                        <span class="px-2 py-1 bg-pixel-dark text-neon-green text-xs font-vt323">Tailwind Css</span>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="pixel-border p-4 bg-pixel-gray bg-opacity-80 hover:bg-neon-purple hover:bg-opacity-20 transition-all duration-300 group">
+                    <div class="mb-4 h-40 bg-pixel-dark flex items-center justify-center">
+                        <i class="fas fa-vr-cardboard text-6xl text-neon-blue group-hover:text-neon-pink transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-press-start text-neon-blue mb-2">Branding NoEmma</h3>
+                    <p class="mb-4">Projet fictif de cabinet RH conçu pour valoriser mes compétences en branding : logo, charte graphique et design UX.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-pixel-dark text-neon-green text-xs font-vt323">Figma</span>
+                        <span class="px-2 py-1 bg-pixel-dark text-neon-green text-xs font-vt323">Photoshop</span>
+                        <span class="px-2 py-1 bg-pixel-dark text-neon-green text-xs font-vt323">Illustrator</span>
+                        <span class="px-2 py-1 bg-pixel-dark text-neon-green text-xs font-vt323">InDesign</span>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="pixel-border p-4 bg-pixel-gray bg-opacity-80 hover:bg-neon-purple hover:bg-opacity-20 transition-all duration-300 group">
+                    <div class="mb-4 h-40 bg-pixel-dark flex items-center justify-center">
+                        <i class="fas fa-laptop-code text-6xl text-neon-blue group-hover:text-neon-pink transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-press-start text-neon-blue mb-2">NCIS - NiCo Info Services</h3>
+                    <p class="mb-4">Refonte du site NCIS avec une nouvelle charte graphique, une navigation optimisée et une interface moderne et responsive.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-pixel-dark text-neon-green text-xs font-vt323">WordPress</span>
+                        <span class="px-2 py-1 bg-pixel-dark text-neon-green text-xs font-vt323">HTML</span>
+                        <span class="px-2 py-1 bg-pixel-dark text-neon-green text-xs font-vt323">CSS</span>
+                        <span class="px-2 py-1 bg-pixel-dark text-neon-green text-xs font-vt323">PHP</span>
+                        <span class="px-2 py-1 bg-pixel-dark text-neon-green text-xs font-vt323">Photoshop</span>
+                        <span class="px-2 py-1 bg-pixel-dark text-neon-green text-xs font-vt323">Illustrator</span>
+                        <span class="px-2 py-1 bg-pixel-dark text-neon-green text-xs font-vt323">Figma</span>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="pixel-border p-4 bg-pixel-gray bg-opacity-80 hover:bg-neon-purple hover:bg-opacity-20 transition-all duration-300 group">
+                    <div class="mb-4 h-40 bg-pixel-dark flex items-center justify-center">
+                        <i class="fas fa-gamepad text-6xl text-neon-blue group-hover:text-neon-pink transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-press-start text-neon-blue mb-2">Qanta</h3>
+                    <p class="mb-4">Qanta est une application de messagerie web en cours de développement, pensée comme une Progressive Web App (PWA) rapide, responsive et installable..</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-pixel-dark text-neon-green text-xs font-vt323">JavaScript</span>
+                        <span class="px-2 py-1 bg-pixel-dark text-neon-green text-xs font-vt323">HTML</span>
+                        <span class="px-2 py-1 bg-pixel-dark text-neon-green text-xs font-vt323">CSS</span>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="pixel-border p-4 bg-pixel-gray bg-opacity-80 hover:bg-neon-purple hover:bg-opacity-20 transition-all duration-300 group">
+                    <div class="mb-4 h-40 bg-pixel-dark flex items-center justify-center">
+                        <i class="fas fa-globe text-6xl text-neon-blue group-hover:text-neon-pink transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-press-start text-neon-blue mb-2">Plateforme e-commerce</h3>
+                    <p class="mb-4">Solution e-commerce sur mesure avec intégration de paiement et tableau de bord administrateur.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-pixel-dark text-neon-green text-xs font-vt323">PHP</span>
+                        <span class="px-2 py-1 bg-pixel-dark text-neon-green text-xs font-vt323">MySQL</span>
+                        <span class="px-2 py-1 bg-pixel-dark text-neon-green text-xs font-vt323">Stripe API</span>
+                        <span class="px-2 py-1 bg-pixel-dark text-neon-green text-xs font-vt323">WordPress</span>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="pixel-border p-4 bg-pixel-gray bg-opacity-80 hover:bg-neon-purple hover:bg-opacity-20 transition-all duration-300 group">
+                    <div class="mb-4 h-40 bg-pixel-dark flex items-center justify-center">
+                        <i class="fas fa-headphones text-6xl text-neon-blue group-hover:text-neon-pink transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-press-start text-neon-blue mb-2">Dancing Machine</h3>
+                    <p class="mb-4">Un mashup vidéo audacieux où l’énergie brute de Justice rencontre l’élégance d’une esthétique rétro.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-pixel-dark text-neon-green text-xs font-vt323">Final Cut Pro</span>
+                        <span class="px-2 py-1 bg-pixel-dark text-neon-green text-xs font-vt323">Sampling Audio</span>
+                        <span class="px-2 py-1 bg-pixel-dark text-neon-green text-xs font-vt323">Mixage</span>
+                        <span class="px-2 py-1 bg-pixel-dark text-neon-green text-xs font-vt323">Mastering</span>
+                        <span class="px-2 py-1 bg-pixel-dark text-neon-green text-xs font-vt323">After Effect</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact section -->
+        <section id="contact" class="mb-16">
+            <h2 class="text-3xl font-press-start text-neon-yellow mb-8">// ME CONTACTER</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="pixel-border p-6 bg-pixel-gray bg-opacity-80">
+                    <h3 class="text-xl font-press-start text-neon-blue mb-4">Formulaire de contact</h3>
+                    
+                    <form id="contact-form" class="space-y-4">
+                        <div>
+                            <label for="name" class="block font-vt323 text-neon-green mb-1">Nom</label>
+                            <input type="text" id="name" name="name" autocomplete="name" required  maxlength="100" class="w-full px-4 py-2 bg-pixel-dark border-2 border-neon-blue text-white focus:border-neon-pink focus:outline-none">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block font-vt323 text-neon-green mb-1">Email</label>
+                            <input type="email" id="email" name="email" autocomplete="email" required class="w-full px-4 py-2 bg-pixel-dark border-2 border-neon-blue text-white focus:border-neon-pink focus:outline-none">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block font-vt323 text-neon-green mb-1">Sujet</label>
+                            <select id="subject" name="subject" class="w-full px-4 py-2 bg-pixel-dark border-2 border-neon-blue text-white focus:border-neon-pink focus:outline-none">
+                                <option value="web">Développement Web</option>
+                                <option value="audio">Audio Production</option>
+                                <option value="video">Video Production</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block font-vt323 text-neon-green mb-1">Message</label>
+                            <textarea id="message" name="message" rows="4" autocomplete="off" required class="w-full px-4 py-2 bg-pixel-dark border-2 border-neon-blue text-white focus:border-neon-pink focus:outline-none"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="px-6 py-2 bg-neon-pink text-pixel-dark font-press-start hover:bg-neon-purple transition-colors">
+                            ENVOYER
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="pixel-border p-6 bg-pixel-gray bg-opacity-80">
+                    <h3 class="text-xl font-press-start text-neon-blue mb-4">Où me trouver</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-envelope text-2xl text-neon-pink mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-press-start text-neon-green mb-1">Email</h4>
+                                <a href="mailto:mad.crea.lab@gmail.com" class="text-lg hover:text-neon-yellow transition-colors">mad.crea.lab@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-phone-alt text-2xl text-neon-pink mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-press-start text-neon-green mb-1">Téléphone</h4>
+                                <a href="tel:+1234567890" class="text-lg hover:text-neon-yellow transition-colors">+33 123567-890</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-2xl text-neon-pink mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-press-start text-neon-green mb-1">Situé à</h4>
+                                <p class="text-lg">Digital Nomad<br>Currently: North Eastern France, Fr</p>
+                            </div>
+                        </div>
+                        
+                        <div class="pt-4">
+                            <h4 class="font-press-start text-neon-green mb-4">Contactez-moi</h4>
+                            <div class="flex space-x-4">
+                                <a href="https://github.com/Mad-Creative-Lab" target="_blank" class="text-2xl text-neon-blue hover:text-neon-pink transition-colors">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer class="text-2xl text-neon-blue hover:text-neon-pink transition-colors">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="https://soundcloud.com/" target="_blank" rel="noopener noreferrer class="text-2xl text-neon-blue hover:text-neon-pink transition-colors">
+                                    <i class="fab fa-soundcloud"></i>
+                                </a>
+                                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer class="text-2xl text-neon-blue hover:text-neon-pink transition-colors">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer class="text-2xl text-neon-blue hover:text-neon-pink transition-colors">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="p-6 border-t-2 border-neon-purple text-center">
+            <p class="font-vt323 text-neon-green">
+                © <span id="year"></span> Mad Cre@tive Lab
+            </p>
+            <p class="mt-2 text-sm font-vt323">
+                Designed & Developed with <i class="fas fa-heart text-neon-pink"></i> and <i class="fas fa-headphones text-neon-blue"></i>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
