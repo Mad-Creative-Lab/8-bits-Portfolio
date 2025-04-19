@@ -19,7 +19,7 @@
      // Obtenir les valeurs du formulaire
      const name = document.getElementById('name').value;
      const email = document.getElementById('email').value;
-     const subject = document.getElementById('subject').value;
+     const sujet = document.getElementById('sujet').value;
      const message = document.getElementById('message').value;
      
      // Validation simple
@@ -29,7 +29,7 @@
      }
      
      // Dans une vraie application, les données seraient envoyées à un serveur
-     console.log('Form submitted:', { name, email, subject, message });
+     console.log('Form submitted:', { name, email, sujet, message });
      
      // Affichage message de réussite
      alert(`Thanks for your message, ${name}! I'll get back to you soon.`);

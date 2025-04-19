@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Message envoyé !</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./tailwind.config.js"></script>
+  <script defer>
+    let countdown = 5;
+    const countdownEl = () => document.getElementById('countdown');
+
+    const timer = setInterval(() => {
+      countdown--;
+      countdownEl().textContent = countdown;
+      if (countdown <= 0) {
+        clearInterval(timer);
+        window.location.href = "index.html"; // ou ton portfolio en ligne
+      }
+    }, 1000);
+  </script>
+</head>
+<body class="pixel-grid">
+
+  <div class="scanlines"></div>
+  <div class="content container mx-auto px-4 py-20 max-w-3xl">
+    <div class="text-center pixel-border p-8 bg-pixel-gray bg-opacity-90 backdrop-blur-sm">
+      <div class="character mx-auto mb-6 animate-float"></div>
+      <h1 class="text-3xl font-press-start text-neon-pink mb-4">// MESSAGE ENVOYÉ</h1>
+      <p class="text-xl font-vt323 text-neon-green mb-6">
+        Merci pour votre message !<br>
+        Je reviendrai vers vous très vite.
+      </p>
+      <p class="text-lg font-vt323 text-neon-yellow">
+        Redirection automatique dans <span id="countdown">5</span> secondes...
+      </p>
+      <a href="index.html" class="inline-block mt-6 px-6 py-2 bg-neon-pink text-pixel-dark font-press-start hover:bg-neon-purple transition-colors">
+        Retour immédiat
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

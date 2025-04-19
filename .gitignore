@@ -1,0 +1,37 @@
+# Fichiers système (macOS)
+.DS_Store
+
+# Logs
+*.log
+
+# Backups, archives, etc.
+*.bak
+*.zip
+*.tar.gz
+
+# Cache d'éditeurs
+*.swp
+*.tmp
+
+# Dossiers de build ou de dépendances (si ajoutés un jour)
+node_modules/
+dist/
+build/
+.cache/
+.vscode/
+
+# Env files (au cas où tu ajoutes une config type API)
+.env
+.env.local
+.env.*.local
+
+# Fichiers compilés potentiels
+*.min.js
+*.min.css
+
+# JetBrains IDE (comme WebStorm)
+.idea/
+
+# ne pas versionner les fichiers d’environnement
+.env
+
